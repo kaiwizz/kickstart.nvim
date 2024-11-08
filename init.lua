@@ -97,6 +97,15 @@ vim.g.have_nerd_font = false
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+--
+-- Setting the tab
+vim.opt.tabstop = 4 -- NOTE: from theprimeagen
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- Sets NOTE: from theprimeagen
+vim.opt.colorcolumn = '80'
 
 -- Make line numbers default
 vim.opt.number = true
@@ -605,6 +614,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
+        julials = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
