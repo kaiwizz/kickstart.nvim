@@ -82,7 +82,7 @@ I hope you enjoy your Neovim journey,
 - TJ
 
 P.S. You can delete this when you're done too. It's your config now! :)
---]]
+-- NOTE:  [[:set commands ]]
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -166,7 +166,12 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- [[ Basic Keymaps ]]
+-- making sure I can use the :! to run commands in Windows using Git bash
+vim.opt.shellcmdflag = '-c'
+vim.opt.shellquote = '"'
+
+-- NOTE: [[ Basic Keymaps ]]
+--
 --  See `:help vim.keymap.set()`
 
 -- Clear highlights on search when pressing <Esc> in normal mode
