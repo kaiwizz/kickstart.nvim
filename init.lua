@@ -629,7 +629,51 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         julials = {},
-        texlab = {},
+
+        texlab = {
+          settings = {
+            texlab = {
+              auxDirectory = '.',
+              bibtexFormatter = 'texlab',
+              build = {
+                executable = 'tectonic', -- NOTE: Need to install tectonic
+                args = {
+                  '-X',
+                  'compile',
+                  '%f',
+                  '--synctex',
+                  '--keep-logs',
+                  '--keep-intermediates',
+                },
+                forwardSearchAfter = true,
+                onSave = true,
+              },
+              chktex = {
+                onEdit = false,
+                onOpenAndSave = false,
+              },
+              diagnosticsDelay = 300,
+              formatterLineLength = 80,
+              forwardSearch = {
+                executable = 'SumatraPDF.exe',
+                args = {
+                  '-reuse-instance',
+                  '-view',
+                  'continuous single page',
+                  '%p',
+                  '-forward-search',
+                  '%f',
+                  '%l',
+                },
+              },
+              latexFormatter = 'latexindent',
+              latexindent = {
+                modifyLineBreaks = false,
+              },
+            },
+          },
+        },
+
         ltex = {},
         -- clangd = {},
         -- gopls = {},
