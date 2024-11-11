@@ -1,3 +1,5 @@
+-- TODO: text buffer completion in latex files
+--
 --[[
 
 =====================================================================
@@ -43,23 +45,7 @@ What is Kickstart?
 
 Kickstart Guide:
 
-  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
-
-    If you don't know what this means, type the following:
-      - <escape key>
-      - :
-      - Tutor
-      - <enter key>
-
-    (If you already know the Neovim basics, you can skip this step.)
-
-  Once you've completed that, you can continue working through **AND READING** the rest
-  of the kickstart init.lua.
-
-  Next, run AND READ `:help`.
-    This will open up a help window with some basic information
-    about reading, navigating and searching the builtin help documentation.
-
+  Run AND READ `:help`.
     This should be the first place you go to look when you're stuck or confused
     with something. It's one of my favorite Neovim features.
 
@@ -82,6 +68,8 @@ I hope you enjoy your Neovim journey,
 - TJ
 
 P.S. You can delete this when you're done too. It's your config now! :)
+
+
 -- NOTE:  [[:set commands ]]
 
 -- Set <space> as the leader key
