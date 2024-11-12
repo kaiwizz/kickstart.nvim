@@ -633,7 +633,7 @@ require('lazy').setup({
                   '--keep-logs',
                   '--keep-intermediates',
                 },
-                forwardSearchAfter = true,
+                forwardSearchAfter = false,
                 onSave = true,
               },
               chktex = {
